@@ -1,6 +1,9 @@
 const express = require('express')
-
 const router = express.Router()
+const bodyParser = require('body-parser')
+const jsonParser = bodyParser.json()
+
+const db = require(__dirname + '/../db_connect')
 
 //read
 router.get('/', (req, res) => {})
