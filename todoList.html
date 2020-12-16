@@ -49,24 +49,52 @@
         <div class="row justify-content-center">
           <div class="card my-5 col-6">
             <div class="title my-2 align-items-center"><h2>待辦事項</h2></div>
-            <div class="add my-3 justify-content-between">
-              <input type="text" id="add-input" placeholder="新增待辦事項" />
-              <button
-                type="button"
-                class="btn btn-primary"
-                id="add-btn"
-                onclick="addTodo"
-              >
-                新增
-              </button>
+
+            <div class="add my-3">
+              <form id="add-form" onsubmit="addTodo; return false" novalidate>
+                <div class="form-group d-flex justify-content-between">
+                  <input
+                    type="text"
+                    id="add-input"
+                    name="content"
+                    placeholder="新增待辦事項"
+                  />
+                  <button type="submit" class="btn btn-primary" id="add-btn">
+                    新增
+                  </button>
+                </div>
+              </form>
             </div>
+
             <div class="wait">
               <h5>尚未完成</h5>
-              <ul class="wait-list" id="wait-list"></ul>
+              <table class="wait-list my-2" id="wait-list">
+                <th scope="col"ead>
+                  <tr>
+                    <th scope="col">項目</th scope="col">
+                    <th scope="col">最後修改日期</th scope="col">
+                    <th scope="col">到期日</th scope="col">
+                    <th scope="col">修改</th scope="col">
+                    <th scope="col">完成</th scope="col">
+                    <th scope="col">取消</th scope="col">
+                  </tr>
+                </th scope="col"ead>
+                <tbody></tbody>
+              </table>
             </div>
             <div class="done">
               <h5>已完成</h5>
-              <ul class="done-list" id="done-list"></ul>
+              <table class="done-list my-2" id="done-list">
+                <th scope="col"ead>
+                  <tr>
+                    <th scope="col">項目</th scope="col">
+                    <th scope="col">最後修改日期</th scope="col">
+                    <th scope="col">到期日</th scope="col">
+                    <th scope="col">刪除</th scope="col">
+                  </tr>
+                </th scope="col"ead>
+                <tbody></tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -90,22 +118,25 @@
     ></script>
 
     <script>
+      const form = document.querySelector('#add-form')
       const addInput = document.querySelector('#add-input')
       const waitList = document.querySelector('#wait-list')
       const doneList = document.querySelector('#done-list')
       const addBtn = document.querySelector('#add-btn')
 
-      const addTodo = addBtn.addEventListener('click', () => {
-        if (addInput.value) {
-          const inputLi = document.createElement('LI')
-          inputLi.innerHTML = addInput.value
-          waitList.appendChild(inputLi)
-        } else {
-          alert('請輸入正確格式！')
-        }
+      //get list
+      function setList(){
+        fetch('http://localhost:3000/api',{
+          method: 'GET',
+          headers: new Headers({
+          'Content-Type':'applicationsjson'
+        }),
+        })
+        .then((res)=> res.json())
+        .catch((error)=> console.log('ERROR!!')
+        )}
 
-        addInput.value = ''
-      })
+
     </script>
   </body>
 </html>
