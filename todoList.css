@@ -1,0 +1,14 @@
+@font-face {
+  font-family: BlenderProBook;
+  src: url(./node/public/styles/Blender-Pro-Book.otf);
+}
+body {
+  background-color: #000;
+  font-size: 14pt;
+  font-family: BlenderProBook, sans-serif !important;
+}
+.todo-card {
+  border: 3px solid #01d7f2;
+  border-radius: 0.5rem;
+  background-color: #fcee0b;
+}

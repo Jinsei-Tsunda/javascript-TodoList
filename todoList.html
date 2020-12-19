@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>待辦事項</title>
+    <title>Todo List</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./todoList.css" />
 
     <style></style>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">待辦事項</a>
+        <a class="navbar-brand" href="#">Todo List</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -33,12 +33,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="./index.html"
-                >主頁 <span class="sr-only">(current)</span></a
+              <a class="nav-link" href="./todoList.html"
+                >Index <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./history.html">歷史紀錄</a>
+              <a class="nav-link" href="./history.html">History</a>
             </li>
           </ul>
         </div>
@@ -47,43 +47,43 @@
     <main>
       <div class="container">
         <div class="row justify-content-center">
-          <div class="card my-5 col-6">
-            <div class="title my-2 align-items-center"><h2>待辦事項</h2></div>
+          <div class="card todo-card my-5 px-4 col-6">
+            <div class="title mt-3 align-items-center"><h2>Todo List</h2></div>
 
             <div class="add my-3">
               <form id="add-form" onsubmit="addTodo; return false" novalidate>
-                <div class="form-group d-flex justify-content-between">
+                <div class="form-group">
                   <input
                     type="text"
                     id="add-input"
                     name="content"
-                    placeholder="新增待辦事項"
+                    placeholder="add something"
                   />
                   <button type="submit" class="btn btn-primary" id="add-btn">
-                    新增
+                    Add
                   </button>
                 </div>
               </form>
             </div>
 
             <div class="wait">
-              <h5>尚未完成</h5>
+              <h5>Waiting</h5>
               <table class="wait-list my-2" id="wait-list">
                 <th scope="col"ead>
                   <tr>
                     <th scope="col">項目</th scope="col">
                     <th scope="col">最後修改日期</th scope="col">
-                    <th scope="col">到期日</th scope="col">
-                    <th scope="col">修改</th scope="col">
-                    <th scope="col">完成</th scope="col">
-                    <th scope="col">取消</th scope="col">
+                    <th scope="col">Expired Date</th scope="col">
+                    <th scope="col">Edit</th scope="col">
+                    <th scope="col">Done</th scope="col">
+                    <th scope="col">Cancel</th scope="col">
                   </tr>
                 </th scope="col"ead>
                 <tbody></tbody>
               </table>
             </div>
             <div class="done">
-              <h5>已完成</h5>
+              <h5>Done</h5>
               <table class="done-list my-2" id="done-list">
                 <th scope="col"ead>
                   <tr>
@@ -101,6 +101,7 @@
       </div>
     </main>
     <footer></footer>
+    </footer>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
