@@ -7,8 +7,22 @@ body {
   font-size: 14pt;
   font-family: BlenderProBook, sans-serif !important;
 }
+.my-navbar {
+  background-color: #fcee0b;
+  font-size: 1.5rem;
+}
+.my-navbar .navbar-brand {
+  font-size: 2rem;
+}
 .todo-card {
   border: 3px solid #01d7f2;
   border-radius: 0.5rem;
   background-color: #fcee0b;
+}
+.input {
+  border: 1px solid #01d7f2;
+  border-radius: 0.25rem;
+}
+.button {
+  border: transparent;
 }
