@@ -27,12 +27,18 @@ body {
   border-radius: 0.25rem;
 }
 .button {
-  color: #fff;
+  height: 32px;
+  border: transparent;
+  border-radius: 0.25rem;
+  color: #000;
+  background-color: #01d7f2;
+
+  /* color: #fff;
   background-color: #01d7f2;
   border: 1px solid transparent;
-  border-radius: 10%;
-  transform: translate();
+  sborder-radius: 10%; */
 }
+
 .button:hover {
   color: #000;
   background-color: #fcee0b;
