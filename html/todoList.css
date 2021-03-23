@@ -19,10 +19,22 @@ body {
   border-radius: 0.5rem;
   background-color: #fcee0b;
 }
+.form-group {
+  margin: 0 auto;
+}
 .input {
   border: 1px solid #01d7f2;
   border-radius: 0.25rem;
 }
 .button {
-  border: transparent;
+  color: #fff;
+  background-color: #01d7f2;
+  border: 1px solid transparent;
+  border-radius: 10%;
+  transform: translate();
+}
+.button:hover {
+  color: #000;
+  background-color: #fcee0b;
+  border: 1px solid #01d7f2;
 }

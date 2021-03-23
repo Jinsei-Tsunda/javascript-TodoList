@@ -125,16 +125,16 @@
       const addBtn = document.querySelector('#add-btn')
 
       //get list
-      function setList(){
-        fetch('http://localhost:3000/api',{
-          method: 'GET',
-          headers: new Headers({
-          'Content-Type':'application/json'
-          })
-        })
-        .then((res)=> res.json())
-        .catch((error)=> console.log('ERROR!!')
-        )}
+      // const setList = async () => {
+      //   await fetch('http://localhost:3000/api',{
+      //     method: 'GET',
+      //     headers: new Headers({
+      //     'Content-Type':'application/json'
+      //     })
+      //   })
+      //   .then((res)=> res.json())
+      //   .catch((error)=> console.log('ERROR!!')
+      //   )}
 
 
     </script>
