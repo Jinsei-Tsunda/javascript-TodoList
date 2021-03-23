@@ -28,7 +28,7 @@ body {
 }
 .button {
   height: 32px;
-  border: transparent;
+  border: 1px solid transparent;
   border-radius: 0.25rem;
   color: #000;
   background-color: #01d7f2;
