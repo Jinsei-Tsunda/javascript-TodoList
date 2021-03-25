@@ -28,19 +28,15 @@ body {
 }
 .button {
   height: 32px;
-  border: 1px solid transparent;
+  border: 1px solid #01d7f2;
   border-radius: 0.25rem;
   color: #000;
-  background-color: #01d7f2;
-
-  /* color: #fff;
-  background-color: #01d7f2;
-  border: 1px solid transparent;
-  sborder-radius: 10%; */
+  background-color: #fcee0b;
+  transition: ease-in 0.15s;
 }
 
 .button:hover {
-  color: #000;
-  background-color: #fcee0b;
-  border: 1px solid #01d7f2;
+  color: #fff;
+  background-color: #01d7f2;
+  border: 1px solid transparent;
 }
